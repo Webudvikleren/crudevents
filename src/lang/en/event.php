@@ -1,0 +1,25 @@
+<?php
+
+return [
+	'actions' => 'Actions',
+	'create' => 'Create event',
+	'created' => 'Event created',
+	'delete' => 'Delete event',
+	'delete.confirm' => 'Are you sure you want to delete the event?',
+	'deleted' => 'Event deleted',
+	'description' => 'Description',
+	'edit' => 'Edit event',
+	'events' => 'Events',
+	'image' => 'Image',
+	'image.replace' => 'Image (if you want to replace)',
+	'location' => 'Location',
+	'name' => 'Name',
+	'noevents' => 'No upcoming events',
+	'public' => 'Public event',
+	'show' => 'Show event',
+	'text' => 'Text',
+	'timeend' => 'End time',
+	'timestart' => 'Start time',
+	'update' => 'Update event',
+	'updated' => 'Event updated',
+];

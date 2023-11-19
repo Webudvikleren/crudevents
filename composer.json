@@ -1,0 +1,22 @@
+{
+    "name": "webudvikleren/crudevents",
+    "description": "CRUD events for a website.",
+    "autoload": {
+        "psr-4": {
+            "Webudvikleren\\CrudEvents\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Philip Sørensen",
+            "email": "git@philipsoerensen.com",
+			"homepage": "https://philipsoerensen.com"
+        }
+    ],
+	"license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+		"philipsorensen/formcomponents": "^1.0",
+		"philipsorensen/iconcomponents": "^1.0"
+	}
+}
