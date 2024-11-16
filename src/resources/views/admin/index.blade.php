@@ -4,7 +4,7 @@
 <h1>{{ trans('crudevents::event.events') }}</h1>
 <x-crudevents::status />
 <a class="btn btn-light" href="{{ route($baseroute . 'create') }}">
-	<x-iconcomponents::plus-circle class="me-1" color="green" />
+	<x-bootstrapicons::plus-circle class="me-1" color="green" />
 	{{ trans('crudevents::event.create') }}
 </a>
 
@@ -22,17 +22,17 @@
 			<td>{{ $event->event_end }}</td>
 			<td class="text-center">
 				<a class="me-4" href="{{ route(config('crudevents.route'), ['id' => $event->id]) }}" title="{{ trans('crudevents::event.show') }}">
-					<x-iconcomponents::search color="green" />
+					<x-bootstrapicons::search color="green" />
 				</a>
 			</td>
 			<td class="text-center">
 				<a class="me-4" href="{{ route($baseroute . 'edit', ['id' => $event->id]) }}" title="{{ trans('crudevents::event.edit') }}">
-					<x-iconcomponents::pencil-square />
+					<x-bootstrapicons::pencil-square />
 				</a>
 			</td>
 			<td class="text-center">
 				<a href="{{ route($baseroute . 'delete', ['id' => $event->id]) }}" onclick="return confirm('{{ trans('crudevents::event.delete.confirm') }}')" title="{{ trans('crudevents::event.delete') }}">
-					<x-iconcomponents::trash color="red" />
+					<x-bootstrapicons::trash color="red" />
 				</a>
 			</td>
 		</tr>
