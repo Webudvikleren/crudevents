@@ -7,7 +7,6 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use Webudvikleren\CrudEvents\Models\CrudEvent;
 
 class AdminCrudEventController extends Controller
@@ -84,7 +83,7 @@ class AdminCrudEventController extends Controller
 			if ($request->image !== null)
 			{
 				$path = config('crudevents.image.path');
-				$filename = Str::uuid() . '.' . $request->image->getClientOriginalExtension();
+				$filename = str()->uuid() . '.' . $request->image->getClientOriginalExtension();
 				Storage::disk(config('crudevents.storage.disk'))->putFileAs($path, $request->image, $filename);
 
 				$event->image = $path . '/' . $filename;
@@ -131,10 +130,10 @@ class AdminCrudEventController extends Controller
 			}
 
 			$path = config('crudevents.image.path');
-			$filename = Str::uuid() . '.' . $request->image->getClientOriginalExtension();
+			$filename = str()->uuid() . '.' . $request->image->getClientOriginalExtension();
 			Storage::disk(config('crudevents.storage.disk'))->putFileAs($path, $request->image, $filename);
 
-			$event->image = $filename;
+            $event->image = $path . '/' . $filename;
 			$event->save();
 		}
 
